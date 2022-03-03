@@ -109,7 +109,7 @@ class PrimitiveRecord(AbstractRecord):
 
     def make_for_storage(self):
         """
-        Prepare the data to be stored
+        Prepare data to be stored
         :return:
         """
         try:
@@ -156,7 +156,7 @@ class DictionaryRecord(PrimitiveRecord):
 
     def make_for_storage_dictionary(self):
         """
-        Prepare the data to be stored
+        Prepare data to be stored
         :return:
         """
         try:

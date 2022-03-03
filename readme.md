@@ -136,7 +136,7 @@ This is done by develiping minimal code by using inheritance. Clas DictionaryRec
 ```python
 def make_for_storage_dictionary(self):
     """
-    Prepare the data to be stored
+    Prepare data to be stored
     :return:
     """
     try:
