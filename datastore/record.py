@@ -108,6 +108,10 @@ class PrimitiveRecord(AbstractRecord):
             self.value=value
 
     def make_for_storage(self):
+        """
+        Prepare the data to stored
+        :return:
+        """
         try:
             if isinstance(self.value, str):
                 self.store_value=self.value
@@ -164,6 +168,10 @@ class JsonRecord(PrimitiveRecord):
             return 'object'
 
     def make_for_storage(self):
+        """
+        Prepare the data to stored
+        :return:
+        """
         try:
             if isinstance(self.value, str):
                 self.store_value=self.value

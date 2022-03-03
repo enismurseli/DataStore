@@ -86,9 +86,11 @@ class Local(AbstractDestination):
 
     def create_connection(self, mode: str):
         try:
+            self.save_dirpath.mkdir(parents=True, exist_ok=True)
             self.connection = open(self.save_filepath, mode=mode)
             return True
         except:
+            raise
             return False
 
     @property
@@ -145,7 +147,7 @@ class Local(AbstractDestination):
                     else:
                         continue
             elif format == 'json':
-                jdata = json.load(line)
+                jdata = json.loads(line)
                 for key in jdata.keys():
                     record = RecordInstance(key=key, value=jdata[key])
                     ds_data.insert_record(new_record=record)
