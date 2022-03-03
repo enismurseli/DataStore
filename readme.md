@@ -49,7 +49,12 @@ TODO
 #### Saving data to cloud S3 
 > destination.S3 
 
-#### Data saved when the Record Instance contains dictionary object
+#### Data saved when the Record Instance contains int, float, string, bool (PrimitiveRecord) and it is saved as string
+`1;sadfs;str
+2;1000.0;float
+3;5;int
+4;True;bool`
+#### Data saved when the Record Instance contains dictionary object (DictionaryRecord) and it is saved as json
 > {"1": "sadfs", "2": "1000.0", "3": "5", "4": "False", "5": "{\"1\": 2}"}
 
 ## Examples
