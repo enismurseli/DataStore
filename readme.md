@@ -4,8 +4,8 @@ where every key maps to a primitive value
 
 Library supports 
 - Primitive records with values of types such as string, int, float, bool
-- Json records that supports primitive one and can handle in addition dictionary objects 
-- Storage formats bytes, json, xml
+- Dictionary values to be saved and loaded properly
+- Storage formats bytes, json 
 - Destinations: local, ftp, s3 
 
 TODO
