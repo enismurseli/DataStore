@@ -39,6 +39,7 @@ TODO
 ## Test
 - Run tests using poetry
   > poetry run pytest
+
 ### Example1 - Create primitive records and add them to datastore
 Python code
 ```python 
@@ -99,7 +100,7 @@ Python code
 from datastore import destination
 from pathlib import Path
 
-local=destination.Local(dirpath=Path.cwd() / "input_ouput_data", filename="data_as_json.json")
+local=destination.Local(dirpath=Path.cwd() / "input_ouput_data", filename="data_as_dict.json")
 local.dump_data(ds_data, mode="w", format='json')
 ```
 File content
