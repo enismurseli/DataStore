@@ -28,7 +28,7 @@ TODO
 - Activate virtualenv by running script activate
     >Script/activate
 
-## Poetry
+## Install package using **Poetry**
 - Go to the main direcorty of the project DataStore
     >Cd DataStore
 - Install package (this will install also dependencies inside pyproject.toml)
