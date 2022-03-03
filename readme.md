@@ -33,7 +33,7 @@ TODO
     >Cd DataStore
 - Install package (this will install also dependencies inside pyproject.toml)
     >Poetry install 
-- After installed is completed you will be able to import the packakge as below
+- After installation is completed you will be able to import the packakge as below
     >from datastore import *
 
 ## Test
