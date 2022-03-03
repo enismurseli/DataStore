@@ -39,7 +39,20 @@ TODO
 ## Test
 - Run tests using poetry
   > poetry run pytest
+## Notes
+#### Saving data to local drive we use
+>destination.Local
 
+#### Saving data to ftp server
+>destination.Ftp
+
+#### Saving data to cloud S3 
+> destination.S3 
+
+#### Data saved when the Record Instance contains dictionary object
+> {"1": "sadfs", "2": "1000.0", "3": "5", "4": "False", "5": "{\"1\": 2}"}
+
+## Examples
 #### Example1 - Create primitive records and add them to datastore
 Python code
 ```python 
@@ -96,6 +109,7 @@ File content
 
 #### Example4 Save data as json format on local drive
 Python code
+
 ```python 
 from datastore import destination
 from pathlib import Path
@@ -109,6 +123,7 @@ File content
 ``` 
 #### Example5 Save data as bytes format on FTP server
 Python code
+
 ```python 
 from datastore import destination
 from pathlib import Path
@@ -120,6 +135,7 @@ ftp=destination.Ftp(Path('test') / "input_ouput_data",
                     password='***')
 local.dump_data(ds_data, format='bytes')
 ```
+
 
 #### Example6 Save dictionary objects (todo numpy, pandas objects) and be able to load it as dictionary 
 ```python 
