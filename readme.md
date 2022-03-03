@@ -20,7 +20,7 @@ TODO
 - Install poetry
     >pip install poetry 
 
-## Using virtualenv 
+## Using virtualenv (optional)
 - Install virtual environmnet
     > py -3.8* -m pip install virtualenv
 - Create virtual environmnet
