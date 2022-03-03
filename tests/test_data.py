@@ -1,5 +1,5 @@
 import random, string
-from datastore.record import PrimitiveRecord, JsonRecord
+from datastore.record import PrimitiveRecord, DictionaryRecord
 from datastore import destination
 from datastore import data
 import pytest

@@ -1,5 +1,5 @@
 # Data is an object that defines a record where keys are primitve type such as string or integer
-from .record import AbstractRecord
+from datastore.record import AbstractRecord
 
 
 class Data:
@@ -16,7 +16,7 @@ class Data:
         :param new_record: record instance
         :return: bool
         """
-        if isinstance(new_record, AbstractRecord):
+        if isinstance(new_record, self.RecordInstance ):
             if new_record.is_valid and not self.check_if_exists(new_record.key_data):
                 new_record.make_for_storage()
                 self.data.append(new_record)

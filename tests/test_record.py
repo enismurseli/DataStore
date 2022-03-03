@@ -1,5 +1,5 @@
 import random, string
-from datastore.record import PrimitiveRecord, JsonRecord
+from datastore.record import PrimitiveRecord, DictionaryRecord
 from datastore import destination
 from datastore import data
 
@@ -60,5 +60,5 @@ def json_records():
                 value = False
             else:
                 value = {1: 2}
-            records.append(JsonRecord(key, value))
+            records.append(DictionaryRecord(key, value))
     return records

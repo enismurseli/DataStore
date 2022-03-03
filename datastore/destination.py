@@ -2,9 +2,9 @@
 import json
 from abc import ABC, abstractmethod
 from pathlib import Path
-from .record import AbstractRecord
+from datastore.record import AbstractRecord
 import ftplib
-from .data import *
+from datastore.data import *
 import boto3
 
 class AbstractDestination(ABC):

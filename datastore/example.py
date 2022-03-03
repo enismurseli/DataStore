@@ -1,9 +1,4 @@
-import base64
-import timeit
-
-# Create a record
-import record
-from record import PrimitiveRecord, JsonRecord
+from record import PrimitiveRecord, DictionaryRecord, AbstractRecord
 from data import Data
 from pathlib import Path
 import destination
@@ -55,14 +50,15 @@ ds_data.delete_record(key=3)
 ds_data.print(5)
 
 print("Create a record with json value")
-record5 = JsonRecord(key=5, value={1: 2})
-json_data = Data(RecordInstance=JsonRecord)
-json_data.insert_record(record1)
-json_data.insert_record(record2)
-json_data.insert_record(record3)
-json_data.insert_record(record4)
-json_data.insert_record(record5)
-json_data.print(5)
+record1 = PrimitiveRecord(key=1, value='sadfs')
+record2 = PrimitiveRecord(key=2, value=1000.0)
+record3 = DictionaryRecord(key=5, value={1: 2})
+new_data = Data(RecordInstance=PrimitiveRecord)
+new_data.insert_record(record1)
+new_data.insert_record(record2)
+new_data.insert_record(record3)
+
+new_data.print(5)
 
 print("Query record with id=2")
 record = ds_data.query_record_via_key(key=2)
@@ -74,5 +70,5 @@ local.dump_data(ds_data, mode="wb", format='bytes')
 ldata = local.load_data(RecordInstance=PrimitiveRecord, format='bytes')
 ldata.print(5)
 
-local = destination.Local(dirpath=Path.cwd() / "input_output_data", filename="test_json_data.json", seperator=";")
-local.dump_data(json_data, mode="w", format="json")
+local = destination.Local(dirpath=Path.cwd() / "input_output_data", filename="test_new_data.json", seperator=";")
+local.dump_data(new_data, mode="w", format="json")
